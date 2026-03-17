@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@tcgdex/sdk':
-        specifier: ^2.7.1
-        version: 2.7.1
       next:
         specifier: 16.1.7
         version: 16.1.7(@babel/core@7.29.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -118,18 +115,6 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
-
-  '@cachex/core@1.0.1':
-    resolution: {integrity: sha512-sHynwjF9hKIvwg8rTUdvA7MOUMcUC5Mq0dpynPBILRS+IPvsHcE4Cb2uRSs0/I2nxO7NQp9p+xHYistdfJJSwg==}
-
-  '@cachex/memory@1.0.1':
-    resolution: {integrity: sha512-KWUTdCCXhIlAkJaVZMhUh9kD0uq8PxC3Z34Q3lMGZOAV6FXP/cOMW89ALrWX3VkoRrrM4R6MIMO+amZNOvEqgw==}
-
-  '@cachex/web-storage@1.0.1':
-    resolution: {integrity: sha512-E8Xa9qDZgNgr+lcj3eixowg7PH2CVZbp3huuoc5xVVTtwYrZi5YqbHBG12yG3r6C6Fts/2Yoq6cbVBSm6c8VRA==}
-
-  '@dzeio/object-util@1.9.2':
-    resolution: {integrity: sha512-L3EBaHnDmf/+LAC61eCgWzcGXjbaOoFB4ml3eeOFxKlVlO6IZ2BpdstoqgAfLNKqdy4Ixp7TlP5z4ohdPxfSLg==}
 
   '@emnapi/core@1.9.0':
     resolution: {integrity: sha512-0DQ98G9ZQZOxfUcQn1waV2yS8aWdZ6kJMbYCJB3oUBecjWYO1fqJ+a1DRfPF3O5JEkwqwP1A9QEN/9mYm2Yd0w==}
@@ -537,10 +522,6 @@ packages:
 
   '@tailwindcss/postcss@4.2.1':
     resolution: {integrity: sha512-OEwGIBnXnj7zJeonOh6ZG9woofIjGrd2BORfvE5p9USYKDCZoQmfqLcfNiRWoJlRWLdNPn2IgVZuWAOM4iTYMw==}
-
-  '@tcgdex/sdk@2.7.1':
-    resolution: {integrity: sha512-wPXdCLLQ0pLcJvvKaZFllhO4cagSsnWeWyzjtZKknySKpSTLwazKxzXW7IpsdEi1+IGIOhNYa51ZDOOGT7KVfw==}
-    engines: {node: '>=18'}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -2078,20 +2059,6 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@cachex/core@1.0.1':
-    dependencies:
-      '@dzeio/object-util': 1.9.2
-
-  '@cachex/memory@1.0.1':
-    dependencies:
-      '@cachex/core': 1.0.1
-
-  '@cachex/web-storage@1.0.1':
-    dependencies:
-      '@cachex/core': 1.0.1
-
-  '@dzeio/object-util@1.9.2': {}
-
   '@emnapi/core@1.9.0':
     dependencies:
       '@emnapi/wasi-threads': 1.2.0
@@ -2406,12 +2373,6 @@ snapshots:
       '@tailwindcss/oxide': 4.2.1
       postcss: 8.5.8
       tailwindcss: 4.2.1
-
-  '@tcgdex/sdk@2.7.1':
-    dependencies:
-      '@cachex/memory': 1.0.1
-      '@cachex/web-storage': 1.0.1
-      '@dzeio/object-util': 1.9.2
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
