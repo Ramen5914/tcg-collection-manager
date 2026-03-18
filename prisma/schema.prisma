@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model CardSet {
+  id        String        @id @default(cuid())
+  name      String        @unique
+  imageKey  String?
+  cards     CatalogCard[]
+  cardCount Int           @default(1)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model CatalogCard {
+  id                String            @id @default(cuid())
+  name              String
+  imageKey          String?
+  setId             String
+  set               CardSet           @relation(fields: [setId], references: [id], onDelete: Cascade)
+  collectionEntries CollectionEntry[]
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  @@unique([setId, name])
+}
+
+model CollectionEntry {
+  id            String      @id @default(cuid())
+  catalogCardId String
+  quantity      Int         @default(1)
+  acquiredAt    DateTime?
+  catalogCard   CatalogCard @relation(fields: [catalogCardId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@unique([catalogCardId])
+}

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "CardSet" ADD COLUMN     "cardCount" INTEGER NOT NULL DEFAULT 1;
